@@ -3,7 +3,7 @@ package oopıntro;
 public class Main {
 
     public static void main(String[] args) {
-            Product();
+        Product();
     }
 
     public static void Category() {
@@ -19,24 +19,25 @@ public class Main {
 
     public static void Product() {
 
-        Product product3 = new Product(3, "Lenovo", 8500, "16 GB");
+        Product product3 = new Product(3, "Lenovo", 8500, "16 GB", 10, 850);
 
         Product product1 = new Product();
-        product1.id = 1;
-        product1.name = "Asus";
-        product1.unitPrice = 10000;
-        product1.detail = "8 GB";
+        product1.setId(1);
+        product1.setName("Asus");
+        product1.setUnitPrice(1000);
+        product1.setDetail("gb");
+        product1.setDiscount(10);
 
         Product product2 = new Product();
-        product2.id = 2;
-        product2.name = "HP";
-        product2.unitPrice = 2500;
-        product2.detail = "4 GB";
+        product2.setId(1);
+        product2.setName("Hp"); 
+        product2.setUnitPrice(1000);
+        product2.setDetail("8gb");
 
-        Product[] products = {product1, product2, product3};
+        oopıntro.Product[] products = {product1, product2, product3};
 
         for (Product product : products) {
-            System.out.println(product.name);
+            System.out.println(product.getName());
         }
 
         System.out.println(products.length);
@@ -48,4 +49,3 @@ public class Main {
         productManager.addToCart(product3);
     }
 }
-
